@@ -21,6 +21,11 @@ Make sure you have the following installed on your machine:
    # or
    yarn install
    ```
+3. Install Tailwind CSS::
+   ```sh
+   npm install -D tailwindcss postcss autoprefixer
+   npx tailwindcss init -p
+   ```
 
 ### Running the Development Server
 To start the frontend development server, run:
