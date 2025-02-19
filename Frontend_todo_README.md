@@ -21,11 +21,6 @@ Make sure you have the following installed on your machine:
    # or
    yarn install
    ```
-3. Set up environment variables:
-   Create a `.env.local` file in the root directory and add the following:
-   ```sh
-   NEXT_PUBLIC_API_URL=http://localhost:5000/api
-   ```
 
 ### Running the Development Server
 To start the frontend development server, run:
@@ -39,17 +34,26 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser.
 ### Project Structure
 ```
 Frontend_todo/
+├── app/
+         ├── addTask/            # AddTask pages
+               ├── page.tsx
+         ├── editTask/           # EditTask pages
+               ├── [id]          # Particular Id
+                     ├── page.tsx
+         ├── page.tsx            # Next.js page
+         ├── layout.tsx          # Next.js layout
+         ├── golbals.css         # Global styles
 ├── components/       # Reusable components
-├── pages/            # Next.js pages
-├── styles/           # Global styles
+         ├── Forms.tsx
+         ├── Header.tsx
+         ├── TaskCard.tsx 
 ├── utils/            # Helper functions
 ├── public/           # Static assets
-├── .env.local        # Environment variables
 └── next.config.js    # Next.js configuration
 ```
 
 ### API Integration
-This frontend connects to a backend API built with Express.js and Prisma. Ensure the backend is running on `http://localhost:5000` before testing API calls.
+This frontend connects to a backend API built with Express.js and Prisma. Ensure the backend is running on `http://localhost:8080` before testing API calls.
 
 ### Building for Production
 To generate a production build, run:
@@ -65,12 +69,6 @@ npm start
 yarn start
 ```
 
-### Deployment
-To deploy, use platforms like **Vercel** or **Netlify**. Example for Vercel:
-```sh
-npm install -g vercel
-vercel
-```
 
-### License
-This project is licensed under the MIT License.
+
+
